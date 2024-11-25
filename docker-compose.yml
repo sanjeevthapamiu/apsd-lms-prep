@@ -1,0 +1,21 @@
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sanjeev
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: lms
+
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: verysecret
+      MYSQL_USER: sanjeev
+      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: lms
